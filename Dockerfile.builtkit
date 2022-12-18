@@ -1,6 +1,6 @@
 FROM registry.gitlab.com/zainal21/laravel-encrypt-decrypt-demo
 
-LABEL maintener="Muhamad Zainal Arifin <muhamad.arifin@djelas.id>"
+LABEL maintener="Muhamad Zainal Arifin <muhamad.arifin@gitbox.com>"
 
 WORKDIR /
 
