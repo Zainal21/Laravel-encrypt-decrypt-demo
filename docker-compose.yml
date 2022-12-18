@@ -1,0 +1,16 @@
+version: "3.7"
+
+networks:
+    laravel-encrypt-decrypt:
+services:
+    site:
+        build:
+            context: .
+            dockerfile: Dockerfile.builtkit
+        container_name: encrypt_laravel_service_apps
+        ports:
+            - "8181:8181"
+        networks:
+            - laravel-encrypt-decrypt
+        volumes:
+            - ./src:/var/www/html:delegated

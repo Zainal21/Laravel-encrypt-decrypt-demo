@@ -1,0 +1,16 @@
+FROM registry.gitlab.com/zainal21/laravel-encrypt-decrypt-demo
+
+LABEL maintener="Muhamad Zainal Arifin <muhamad.arifin@djelas.id>"
+
+WORKDIR /
+
+COPY . /
+
+RUN composer install
+
+RUN composer update
+
+RUN php artisan optimize
+
+CMD php artisan serve --host=0.0.0.0 --port=8181
+EXPOSE 8181
